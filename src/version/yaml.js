@@ -25,6 +25,8 @@ module.exports = class Yaml extends BaseVersioning {
       oldVersion,
     )
 
+    this.oldVersion = oldVersion
+
     // Update the file
     if (oldVersion) {
       // Get the name of where the version is in
