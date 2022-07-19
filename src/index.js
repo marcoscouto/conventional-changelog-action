@@ -127,6 +127,7 @@ async function run() {
         )
 
         newVersion = versioning[0].newVersion
+        oldVersion = versioning[0].oldVersion
       }
 
       let gitTag = `${tagPrefix}${newVersion}`
@@ -160,6 +161,8 @@ async function run() {
       }
 
       core.info(`New version: ${newVersion}`)
+      core.info(`Old version: ${oldVersion}`)
+
 
       // If output file === 'false' we don't write it to file
       if (outputFile !== 'false') {
